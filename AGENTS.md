@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Store website media in the public `rivoningo-media` Cloud bucket and reference it through `src/lib/site.ts`, so all pages use one media source.
+- Booking requests open a prefilled WhatsApp chat instead of being stored, because the owner chose WhatsApp as the destination.

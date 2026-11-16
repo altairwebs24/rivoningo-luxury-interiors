@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794848887376,
+      "tag": "0000_allow_public_rivoningo_media_read",
+      "breakpoints": true
+    }
+  ]
+}
