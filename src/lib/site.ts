@@ -27,12 +27,21 @@ export const projects = [
   { title: "Arc Mirror Feature Wall", category: "Interior design", image: "mirror-entryway.jpg" },
 ];
 
-export function bookingMessage(values: Record<string, string>) {
+export interface BookingFields {
+  name: string;
+  phone: string;
+  service: string;
+  date: string;
+  location: string;
+  details: string;
+}
+
+export function bookingMessage(values: BookingFields) {
   return [
     "Hello Rivoningo Steel & Interior Design, I would like to book a consultation.",
-    `Name: ${values.name}`, `Phone: ${values.phone}`, `Service: ${values.service}`,
-    `Preferred date: ${values.date || "Flexible"}`, `Location: ${values.location || "Not provided"}`,
-    `Project details: ${values.details}`,
+    `Name: ${values["name"]}`, `Phone: ${values["phone"]}`, `Service: ${values["service"]}`,
+    `Preferred date: ${values["date"] || "Flexible"}`, `Location: ${values["location"] || "Not provided"}`,
+    `Project details: ${values["details"]}`,
   ].join("\n");
 }
 export const whatsappUrl = (text: string) => `https://wa.me/${business.whatsapp}?text=${encodeURIComponent(text)}`;

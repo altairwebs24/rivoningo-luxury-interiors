@@ -3,7 +3,7 @@ import { Clock, Mail, MapPin, MessageCircle } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { PageIntro, SiteLayout } from "@/components/site/Layout";
 import { Button } from "@/components/ui/button";
-import { bookingMessage, business, services, whatsappUrl } from "@/lib/site";
+import { bookingMessage, business, services, whatsappUrl, type BookingFields } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({ meta: [
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-const empty = { name: "", phone: "", service: services[0], date: "", location: "", details: "" };
+const empty: BookingFields = { name: "", phone: "", service: services[0] ?? "Kitchen units", date: "", location: "", details: "" };
 function Contact() {
   const [values, setValues] = useState(empty);
   const update = (key: keyof typeof empty, value: string) => setValues((v) => ({ ...v, [key]: value }));
