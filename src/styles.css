@@ -127,13 +127,14 @@
 }
 
 @layer base {
+  html { font-size: 15px; }
   body { font-family: var(--font-sans); }
   ::selection { background: var(--gold); color: var(--ink); }
 }
 
 #lovable-badge { display: none !important; }
 
-@utility eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); }
+@utility eyebrow { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); }
 @utility nav-link { position: relative; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted-foreground); transition: color .2s; &:hover { color: var(--foreground); } }
 @utility nav-link-active { color: var(--foreground); &::after { content: ""; position: absolute; left: 0; right: 0; bottom: -0.65rem; height: 1px; background: var(--gold); } }
 @utility hero-veil { background: linear-gradient(90deg, color-mix(in oklab, var(--ink) 88%, transparent), color-mix(in oklab, var(--ink) 35%, transparent)), linear-gradient(0deg, color-mix(in oklab, var(--ink) 75%, transparent), transparent 55%); }
