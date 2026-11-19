@@ -10,3 +10,15 @@ describe("booking WhatsApp link", () => {
     expect(bookingMessage({ name: "Ann", phone: "1", service: "Gates", date: "", location: "", details: "New gate" })).toContain("Service: Gates");
   });
 });
+
+describe("Rivoningo contact and service details", () => {
+  it("uses the email shown in the updated business image", async () => {
+    const { business } = await import("./site");
+    expect(business.email).toBe("rivoningosteelinterior@gmail.com");
+  });
+
+  it.each(["Kitchen remodeling", "Bedroom cabinets", "Bathroom vanities", "Floating shelves", "Bars", "Office interiors", "Bulkheads"])("includes %s in services", async (service) => {
+    const { services } = await import("./site");
+    expect(services).toContain(service);
+  });
+});

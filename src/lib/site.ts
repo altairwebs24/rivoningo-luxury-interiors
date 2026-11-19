@@ -7,15 +7,16 @@ export const business = {
   owner: "Justice Reaans Marutha",
   founded: 2021,
   address: "Benfarm Majeje Rockview, Stand 1457, Phalaborwa, South Africa",
-  email: "maruthajustice24@gmail.com",
+  email: "rivoningosteelinterior@gmail.com",
   phoneDisplay: "076 029 3750",
   whatsapp: "27760293750",
   hours: "Open 24 hours",
 };
 
 export const services = [
-  "Kitchen units", "Wall wardrobes", "TV stands", "Partitioning", "Storage shelves",
-  "Renovations", "Carports", "Gates", "Wall panels", "Window frames", "Security doors",
+  "Kitchen units", "Kitchen remodeling", "Bedroom cabinets", "Wall wardrobes", "Bathroom vanities",
+  "TV stands", "Floating shelves", "Bars", "Office interiors", "Bulkheads", "Partitioning",
+  "Storage shelves", "Renovations", "Carports", "Gates", "Wall panels", "Window frames", "Security doors",
 ];
 
 export const projects = [
