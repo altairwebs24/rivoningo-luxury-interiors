@@ -17,7 +17,12 @@ describe("Rivoningo contact and service details", () => {
     expect(business.email).toBe("rivoningosteelinterior@gmail.com");
   });
 
-  it.each(["Kitchen remodeling", "Bedroom cabinets", "Bathroom vanities", "Floating shelves", "Bars", "Office interiors", "Bulkheads"])("includes %s in services", async (service) => {
+  it.each(["Kitchen units", "Wall wardrobes", "TV stands", "Partitioning", "Storage shelves", "Renovations", "Carports", "Gates", "Wall panels", "Window frames", "Security doors"])("retains existing service: %s", async (service) => {
+    const { services } = await import("./site");
+    expect(services).toContain(service);
+  });
+
+  it.each(["Kitchens", "Remodeling existing kitchens", "Bedroom cabinets", "Bathroom vanities", "Floating shelves", "Bars", "Offices", "Bulk head"])("adds the service shown in the photo: %s", async (service) => {
     const { services } = await import("./site");
     expect(services).toContain(service);
   });

@@ -13,11 +13,17 @@ export const business = {
   hours: "Open 24 hours",
 };
 
-export const services = [
-  "Kitchen units", "Kitchen remodeling", "Bedroom cabinets", "Wall wardrobes", "Bathroom vanities",
-  "TV stands", "Floating shelves", "Bars", "Office interiors", "Bulkheads", "Partitioning",
-  "Storage shelves", "Renovations", "Carports", "Gates", "Wall panels", "Window frames", "Security doors",
+const existingServices = [
+  "Kitchen units", "Wall wardrobes", "TV stands", "Partitioning", "Storage shelves",
+  "Renovations", "Carports", "Gates", "Wall panels", "Window frames", "Security doors",
 ];
+
+const additionalServices = [
+  "Kitchens", "Remodeling existing kitchens", "Bedroom cabinets", "Bathroom vanities",
+  "Floating shelves", "Bars", "Offices", "Bulk head",
+];
+
+export const services = [...existingServices, ...additionalServices];
 
 export const projects = [
   { title: "Golden Glass Kitchen", category: "Kitchen units", image: "luxury-kitchen.jpg" },
